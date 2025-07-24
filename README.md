@@ -31,7 +31,7 @@ resource_group_name = "your-resource-group-name"
 location           = "East US"
 server_name        = "your-postgresql-server-name"
 admin_username     = "your-admin-username"
-admin_password     = "YourSecurePassword123!"
+admin_password     = "password"
 ```
 
 **Important Notes:**
