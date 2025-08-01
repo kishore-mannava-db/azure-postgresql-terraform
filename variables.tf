@@ -37,10 +37,17 @@ variable "postgres_version" {
   default     = "15"
 }
 
-variable "storage_mb" {
-  description = "Max storage for the server in MB"
+
+variable "storageSizeGB" {
+  description = "Storage size in GB (will be converted to MB)"
   type        = number
-  default     = 32768
+  default     = 512
+}
+
+variable "iopsTier" {
+  description = "IOPS tier for the storage (P4, P6, P10, P15, P20, P30, P40, P50, P60, P70, P80)"
+  type        = string
+  default     = "P40"
 }
 
 variable "auto_grow_enabled" {

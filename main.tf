@@ -42,7 +42,9 @@ resource "azurerm_postgresql_flexible_server" "example" {
   sku_name = var.sku_name
   version  = var.postgres_version
 
-  storage_mb = var.storage_mb
+  storage_mb = var.storageSizeGB * 1024
+
+  storage_tier = var.iopsTier
 
   backup_retention_days        = var.backup_retention_days
   geo_redundant_backup_enabled = var.geo_redundant_backup_enabled
